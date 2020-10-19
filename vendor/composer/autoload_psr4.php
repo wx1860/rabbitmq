@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'component\\rabbitmq\\Tests\\' => array($baseDir . '/tests'),
-    'component\\rabbitmq\\' => array($baseDir . '/src'),
+    'kdy\\rabbitmq\\Tests\\' => array($baseDir . '/tests'),
+    'kdy\\rabbitmq\\' => array($baseDir . '/src'),
     'PhpAmqpLib\\' => array($vendorDir . '/php-amqplib/php-amqplib/PhpAmqpLib'),
 );

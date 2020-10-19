@@ -1,7 +1,7 @@
 <?php
 
 
-namespace component\rabbitmq;
+namespace kdy\rabbitmq;
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;

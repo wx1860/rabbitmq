@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "component\\rabbitmq\\": "src/"
+            "kdy\\rabbitmq\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "component\\rabbitmq\\Tests\\": "tests"
+            "kdy\\rabbitmq\\Tests\\": "tests"
         }
     },
     "config": {
@@ -36,7 +36,7 @@
     "extra": {
         "think": {
             "services": [
-                "component\\rabbitmq\\Service"
+                "kdy\\rabbitmq\\Service"
             ],
             "config": {
                 "rabbitmq": "src/config.php"

@@ -15,10 +15,10 @@ class ComposerStaticInitaa7488c2a7ac806633e993bc8e14544c
         array (
             'phpseclib\\' => 10,
         ),
-        'c' => 
+        'k' => 
         array (
-            'component\\rabbitmq\\Tests\\' => 25,
-            'component\\rabbitmq\\' => 19,
+            'kdy\\rabbitmq\\Tests\\' => 19,
+            'kdy\\rabbitmq\\' => 13,
         ),
         'P' => 
         array (
@@ -31,11 +31,11 @@ class ComposerStaticInitaa7488c2a7ac806633e993bc8e14544c
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
-        'component\\rabbitmq\\Tests\\' => 
+        'kdy\\rabbitmq\\Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
         ),
-        'component\\rabbitmq\\' => 
+        'kdy\\rabbitmq\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

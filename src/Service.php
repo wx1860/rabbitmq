@@ -1,6 +1,6 @@
 <?php
 
-namespace component\rabbitmq;
+namespace kdy\rabbitmq;
 
 class Service extends \think\Service
 {
