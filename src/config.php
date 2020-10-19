@@ -13,10 +13,10 @@ return [
         'local' => [
             'driver'    => 'rabbitmq',
             'host'      => env('RABBITMQ.LOCAL_HOST',''),
-            'port'      => env('RABBITMQ.LOCAL_PORT','5672'),
-            'username'  => env('RABBITMQ.LOCAL_USER','guest'),
-            'password'  => env('RABBITMQ.LOCAL_PASSWORD','guest'),
-            'vhost'  => env('RABBITMQ.LOCAL_VHOST','test'),
+            'port'      => env('RABBITMQ.LOCAL_PORT',''),
+            'username'  => env('RABBITMQ.LOCAL_USER',''),
+            'password'  => env('RABBITMQ.LOCAL_PASSWORD',''),
+            'vhost'  => env('RABBITMQ.LOCAL_VHOST',''),
         ],
         'kdy' => [
             'driver'    => 'rabbitmq',
