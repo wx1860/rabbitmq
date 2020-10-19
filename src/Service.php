@@ -1,6 +1,6 @@
 <?php
 
-namespace MyVendor\MyPackage;
+namespace component\rabbitmq;
 
 class Service extends \think\Service
 {
