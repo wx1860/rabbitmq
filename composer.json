@@ -1,0 +1,46 @@
+{
+    "name": "component/rabbitmq",
+    "keywords": [
+        "component",
+        "rabbitmq"
+    ],
+    "type": "lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wx18",
+            "email": "wx49722142@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.0",
+        "php-amqplib/php-amqplib": "^2.12"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "component\\rabbitmq\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "component\\rabbitmq\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "component\\rabbitmq\\Service"
+            ],
+            "config": {
+                "rabbitmq": "src/config.php"
+            }
+        }
+    }
+}
