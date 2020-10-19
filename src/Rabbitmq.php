@@ -40,7 +40,7 @@ class Rabbitmq
     }
 
     /**
-     * @desc 初始化连接信道
+     * @desc 初始化配置信息
      */
     private function init()
     {
@@ -48,7 +48,20 @@ class Rabbitmq
         if(!$this->conf){
             exit('配置文件未找到');
         }
-        $connection = $this->conf['connections']['kdy'];
+
+    }
+
+    /**
+     * @desc 创建连接
+     *
+     */
+    public function onConnection($connection='')
+    {
+        if($connection){
+            $this->connection = $this->conf['connections'][$connection];
+        }else{
+            $this->connection = $this->conf['connections']['default'];
+        }
         $this->connection = new AMQPStreamConnection(
             $connection['host'],
             $connection['port'],
@@ -56,15 +69,15 @@ class Rabbitmq
             $connection['password'],
             $connection['vhost']
         );
-
         if(!$this->connection){
-            exit('连接失败');
+            exit('创建连接失败');
         }
         //创建通道
         $this->channel = $this->connection->channel();
         if(!$this->channel){
             exit('创建通道失败');
         }
+        return $this;
     }
 
     /**
@@ -107,6 +120,7 @@ class Rabbitmq
      */
     public function dispatch($data=[])
     {
+
         if(!$data){
             exit('消息数据不能为空');
         }
@@ -116,7 +130,6 @@ class Rabbitmq
         ]);
 
         $this->channel->basic_publish($msg,$this->exchangeName,$this->routyKey);
-
     }
 
     /**
