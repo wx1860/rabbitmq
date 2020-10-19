@@ -1,14 +1,14 @@
 {
     "name": "kdy/rabbitmq",
     "keywords": [
-        "component",
+        "kdy",
         "rabbitmq"
     ],
     "type": "lib",
     "license": "MIT",
     "authors": [
         {
-            "name": "wx180",
+            "name": "wx1860",
             "email": "wx49722142@163.com"
         }
     ],
