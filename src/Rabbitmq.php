@@ -58,9 +58,9 @@ class Rabbitmq
     public function onConnection($connection='')
     {
         if($connection){
-            $this->connection = $this->conf['connections'][$connection];
+            $connection = $this->conf['connections'][$connection];
         }else{
-            $this->connection = $this->conf['connections']['default'];
+            $connection = $this->conf['connections']['default'];
         }
         $this->connection = new AMQPStreamConnection(
             $connection['host'],
