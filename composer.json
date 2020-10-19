@@ -5,6 +5,7 @@
         "rabbitmq"
     ],
     "type": "lib",
+    "homepage": "https://github.com/wx1860/rabbitmq.git",
     "license": "MIT",
     "authors": [
         {
