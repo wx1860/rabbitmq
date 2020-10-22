@@ -144,8 +144,6 @@ class Rabbitmq
         while (count($this->channel->callbacks)) {
                 $this->channel->wait();
         }
-        $this->channel->close();
-        $this->connection->close();
     }
 
 
@@ -192,10 +190,10 @@ class Rabbitmq
 
     }
 
-//    public function __destruct()
-//    {
-//        $this->channel->close();
-//        $this->connection->close();
-//    }
+    public function __destruct()
+    {
+        $this->channel->close();
+        $this->connection->close();
+    }
 
 }
